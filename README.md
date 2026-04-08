@@ -4,6 +4,10 @@ Thank you for reviewing this assignment submission. This README includes archite
 
 A Flutter-based personal finance tracker with a modern fintech-style UI, local persistence, and modular architecture for future backend migration.
 
+## Demo Video
+
+<video src="Demo_Vedio.mp4" controls width="900"></video>
+
 ## Table of Contents
 
 - [Architecture Decisions and Assumptions](#architecture-decisions-and-assumptions)
@@ -14,7 +18,6 @@ A Flutter-based personal finance tracker with a modern fintech-style UI, local p
 	- [Key Assumptions](#key-assumptions)
 - [Setup Instructions](#setup-instructions)
 - [Feature List](#feature-list)
-- [Demo Video](#demo-video)
 - [App Screenshots](#app-screenshots)
 - [UI/UX Inspiration](#uiux-inspiration)
 - [AI Disclosure](#ai-disclosure)
@@ -137,10 +140,6 @@ flutter build apk
   - Light/dark theme toggle available in top app bars
 - Notification UX
   - Awesome snackbar feedback (`awesome_snackbar_content`) for key success/error/warning events
-
-## Demo Video
-
-- [Watch / Download Demo Video](Demo_Vedio.mp4)
 
 ## App Screenshots
 
