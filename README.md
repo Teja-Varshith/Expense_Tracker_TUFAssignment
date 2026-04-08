@@ -1,6 +1,6 @@
 # Expense Tracker (TakeUForward Assignment)
 
-HAVE SPENT GREAT TIME BUILDING THIS I HOPE IT WILL BE REVIEWED NEATLY I HAVE COVERED ARTI. DECISIONS, STATE MANAGEMENT, LATER BKND INTEGRATION AND MANY OTHER THINHGS PLS TAKE YOUR TIME AND READ THIS MARKDOWN.
+Thank you for reviewing this assignment submission. This README includes architecture choices, state management decisions, scalability notes, setup steps, screenshots, and demo links.
 
 A Flutter-based personal finance tracker with a modern fintech-style UI, local persistence, and modular architecture for future backend migration.
 
@@ -14,6 +14,7 @@ A Flutter-based personal finance tracker with a modern fintech-style UI, local p
 	- [Key Assumptions](#key-assumptions)
 - [Setup Instructions](#setup-instructions)
 - [Feature List](#feature-list)
+- [Demo Video](#demo-video)
 - [App Screenshots](#app-screenshots)
 - [UI/UX Inspiration](#uiux-inspiration)
 - [AI Disclosure](#ai-disclosure)
@@ -136,6 +137,10 @@ flutter build apk
   - Light/dark theme toggle available in top app bars
 - Notification UX
   - Awesome snackbar feedback (`awesome_snackbar_content`) for key success/error/warning events
+
+## Demo Video
+
+- [Watch / Download Demo Video](Demo_Vedio.mp4)
 
 ## App Screenshots
 
