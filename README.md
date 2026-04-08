@@ -6,6 +6,7 @@ A Flutter-based personal finance tracker with a modern fintech-style UI, local p
 
 - [Architecture Decisions and Assumptions](#architecture-decisions-and-assumptions)
 	- [Why This Architecture](#why-this-architecture)
+  - [State Management Choice: Riverpod](#state-management-choice-riverpod)
 	- [Repository Pattern + Hive](#repository-pattern--hive)
 	- [Scalability and Backend Migration Readiness](#scalability-and-backend-migration-readiness)
 	- [Key Assumptions](#key-assumptions)
@@ -32,6 +33,24 @@ This follows an MVC-like flow adapted for Flutter + Riverpod:
 - Controller: Riverpod notifiers/providers as app logic
 - Model: domain models (`TransactionModel`, `AppUser`, etc.)
 - Repository: data boundary between controller and persistence
+
+### State Management Choice: Riverpod
+
+I chose Riverpod as the primary state management approach for this assignment.
+
+Why Riverpod fits this project:
+
+- Compile-time safety
+  - Provider wiring and type mismatches are caught early, reducing runtime state bugs.
+- Testability
+  - Controllers and providers are easy to unit test in isolation.
+  - Business logic can be validated without rendering full widget trees.
+- Scalability
+  - Feature-level providers keep state localized and maintainable.
+  - As the app grows, each module can evolve independently with cleaner boundaries.
+- Cleaner code
+  - Less boilerplate for dependency access compared to manual wiring.
+  - Clear, predictable flow from UI -> controller -> repository.
 
 ### Repository Pattern + Hive
 
