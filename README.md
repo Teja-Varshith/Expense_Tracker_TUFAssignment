@@ -1,5 +1,7 @@
 # Expense Tracker (TakeUForward Assignment)
 
+HAVE SPENT GREAT TIME BUILDING THIS I HOPE IT WILL BE REVIEWED NEATLY I HAVE COVERED ARTI. DECISIONS, STATE MANAGEMENT, LATER BKND INTEGRATION AND MANY OTHER THINHGS PLS TAKE YOUR TIME AND READ THIS MARKDOWN.
+
 A Flutter-based personal finance tracker with a modern fintech-style UI, local persistence, and modular architecture for future backend migration.
 
 ## Table of Contents
