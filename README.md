@@ -8,6 +8,8 @@ A Flutter-based personal finance tracker with a modern fintech-style UI, local p
 
 <video src="Demo_Vedio.mp4" controls width="900"></video>
 
+If the video preview does not load, open it here: [Watch Demo Video](Demo_Vedio.mp4)
+
 ## Table of Contents
 
 - [Architecture Decisions and Assumptions](#architecture-decisions-and-assumptions)
