@@ -6,7 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTheme {
   AppTheme._();
 
-  // ── Light Theme ─────────────────────────────────────────────
   static ThemeData light = ThemeData(
     brightness: Brightness.light,
     scaffoldBackgroundColor: AppColors.lightBg,
@@ -96,7 +95,6 @@ class AppTheme {
     ),
   );
 
-  // ── Dark Theme ──────────────────────────────────────────────
   static ThemeData dark = ThemeData(
     brightness: Brightness.dark,
     scaffoldBackgroundColor: AppColors.darkBg,
@@ -186,7 +184,6 @@ class AppTheme {
     ),
   );
 
-  // ── Shared Text Theme ───────────────────────────────────────
   static TextTheme _textTheme(Brightness brightness) {
     final isLight = brightness == Brightness.light;
     final primary =

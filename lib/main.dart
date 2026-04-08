@@ -23,7 +23,7 @@ class App extends ConsumerWidget {
 
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'PayU',
+      title: 'PayUForward',
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       themeMode: themeMode,

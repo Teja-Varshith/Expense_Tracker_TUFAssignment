@@ -1,5 +1,6 @@
 import 'package:expense_tracker_tuf/core/app/app_colors.dart';
 import 'package:expense_tracker_tuf/core/widgets/animated_toggle.dart';
+import 'package:expense_tracker_tuf/core/widgets/app_snackbar.dart';
 import 'package:expense_tracker_tuf/core/theme/theme_provider.dart';
 import 'package:expense_tracker_tuf/providers/user_provider.dart';
 import 'package:flutter/material.dart';
@@ -20,11 +21,9 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
   bool _obscureConfirm = true;
   bool _isLoading = false;
 
-  // Sign In controllers
   final _signInEmail = TextEditingController();
   final _signInPassword = TextEditingController();
 
-  // Sign Up controllers
   final _signUpName = TextEditingController();
   final _signUpEmail = TextEditingController();
   final _signUpPassword = TextEditingController();
@@ -72,7 +71,6 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
     );
   }
 
-  // ── Header ──────────────────────────────────────────────────
   Widget _headerSection(bool isDark) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,7 +125,6 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
     );
   }
 
-  // ── Auth Card ───────────────────────────────────────────────
   Widget _authCard(bool isDark) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 400),
@@ -205,7 +202,6 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
     );
   }
 
-  // ── Sign In Form ────────────────────────────────────────────
   Widget _signInForm(bool isDark) {
     return Column(
       key: const ValueKey('sign_in'),
@@ -269,7 +265,6 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
     );
   }
 
-  // ── Sign Up Form ────────────────────────────────────────────
   Widget _signUpForm(bool isDark) {
     return Column(
       key: const ValueKey('sign_up'),
@@ -342,7 +337,6 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
     );
   }
 
-  // ── Shared Helpers ──────────────────────────────────────────
   Widget _label(String text, bool isDark) {
     return Text(
       text.toUpperCase(),
@@ -372,7 +366,6 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
     );
   }
 
-  // ── NeoPop Submit Button ────────────────────────────────────
   Widget _neoPopSubmitButton({
     required String label,
     required VoidCallback onPressed,
@@ -426,7 +419,6 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
     );
   }
 
-  // ── Footer ──────────────────────────────────────────────────
   Widget _footerTerms(bool isDark) {
     return Center(
       child: Text(
@@ -443,7 +435,6 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
     );
   }
 
-  // ── Validators ──────────────────────────────────────────────
   String? _validateEmail(String? value) {
     if (value == null || value.isEmpty) return 'Email is required';
     if (!RegExp(r'^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
@@ -465,13 +456,19 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
       await ref
           .read(userProvider.notifier)
           .signIn(email: _signInEmail.text.trim());
+      if (mounted) {
+        AppSnackbar.success(
+          context,
+          title: 'Welcome back',
+          message: 'Signed in successfully.',
+        );
+      }
     } catch (e) {
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(e.toString().replaceFirst('Exception: ', '')),
-            backgroundColor: Colors.redAccent,
-          ),
+        AppSnackbar.failure(
+          context,
+          title: 'Sign in failed',
+          message: e.toString().replaceFirst('Exception: ', ''),
         );
       }
     } finally {
@@ -489,13 +486,19 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
             fullName: _signUpName.text.trim(),
             email: _signUpEmail.text.trim(),
           );
+      if (mounted) {
+        AppSnackbar.success(
+          context,
+          title: 'Account created',
+          message: 'Sign up completed successfully.',
+        );
+      }
     } catch (e) {
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(e.toString().replaceFirst('Exception: ', '')),
-            backgroundColor: Colors.redAccent,
-          ),
+        AppSnackbar.failure(
+          context,
+          title: 'Sign up failed',
+          message: e.toString().replaceFirst('Exception: ', ''),
         );
       }
     } finally {

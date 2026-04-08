@@ -9,7 +9,6 @@ final themeProvider = NotifierProvider<ThemeNotifier, ThemeMode>(() {
 class ThemeNotifier extends Notifier<ThemeMode> {
   @override
   ThemeMode build() {
-    // Load persisted theme on startup
     return HiveService.getThemeMode();
   }
 
