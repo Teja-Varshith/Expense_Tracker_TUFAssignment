@@ -38,10 +38,17 @@ dependencies:
   #STYLING
   google_fonts:
   fl_chart:
+  neopop: ^1.0.2
+
+  #CARDS
+  stacked_card_carousel: ^0.0.4
 
   #STORAGE
-  hive_flutter :
-  
+  hive_flutter:
+
+  #UTILS
+  uuid:
+  intl:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
