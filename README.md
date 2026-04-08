@@ -118,17 +118,22 @@ flutter build apk
 
 ## App Screenshots
 
-Screenshots from the project root:
+All screenshots are stored in `docs/screenshots/`.
 
-| Screen | Preview |
-|---|---|
-| Screen 1 | ![Screen 1](flutter_01.png) |
-| Screen 2 | ![Screen 2](flutter_02.png) |
-| Screen 3 | ![Screen 3](flutter_03.png) |
-| Screen 4 | ![Screen 4](flutter_04.png) |
-| Screen 5 | ![Screen 5](flutter_05.png) |
-| Screen 6 | ![Screen 6](flutter_06.png) |
-| Screen 7 | ![Screen 7](flutter_07.png) |
+<table>
+  <tr>
+    <td><img src="docs/screenshots/flutter_01.png" width="240" alt="App screenshot 1"/></td>
+    <td><img src="docs/screenshots/flutter_02.png" width="240" alt="App screenshot 2"/></td>
+    <td><img src="docs/screenshots/flutter_03.png" width="240" alt="App screenshot 3"/></td>
+    <td><img src="docs/screenshots/flutter_04.png" width="240" alt="App screenshot 4"/></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/flutter_05.png" width="240" alt="App screenshot 5"/></td>
+    <td><img src="docs/screenshots/flutter_06.png" width="240" alt="App screenshot 6"/></td>
+    <td><img src="docs/screenshots/flutter_07.png" width="240" alt="App screenshot 7"/></td>
+    <td><img src="docs/screenshots/flutter_08.png" width="240" alt="App screenshot 8"/></td>
+  </tr>
+</table>
 
 ## UI/UX Inspiration
 
